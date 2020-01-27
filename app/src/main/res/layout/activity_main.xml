@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
+    >
+
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="286dp"
+        android:layout_height="275dp"
+        android:background="@drawable/roundbutton"
+        android:shadowColor="#A8A8A8"
+        android:shadowRadius="50"
+        android:textColor="#F3DC15"
+        android:textSize="124sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:alpha=".2"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.273" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:alpha=".6"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:text="@string/last_reset"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lastreset"
+        android:layout_width="wrap_content"
+        android:layout_height="119dp"
+        android:alpha=".6"
+        android:textSize="32sp"
+        android:paddingTop="20dp"
+        android:paddingRight="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_new_note"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        android:layout_margin="24dp"
+        android:layout_marginBottom="24dp"
+        android:alpha=".6"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        android:foreground="@drawable/new_note"
+        android:backgroundTint="@color/fab_bot"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hide_button_m"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btw_view_note"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btw_view_note"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        android:layout_margin="24dp"
+        android:alpha=".6"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        android:foreground="@drawable/all_note"
+        android:backgroundTint="@color/fab_top"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hide_button_m"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_button"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_todolist"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        android:layout_margin="24dp"
+        android:layout_marginTop="100dp"
+        android:alpha=".6"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        android:foreground="@drawable/todo_list"
+        app:backgroundTint="@color/fab_top"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hide_button_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_button"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_delall"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        android:layout_margin="24dp"
+        android:layout_marginBottom="16dp"
+        android:alpha=".6"
+        android:backgroundTint="@color/fab_bot"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        android:foreground="@drawable/del_note"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hide_button_m"
+        app:layout_constraintTop_toBottomOf="@+id/btn_todolist"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hide_button_m"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        android:layout_margin="24dp"
+        android:alpha=".6"
+        android:foreground="@drawable/ic_stars_black_24dp"
+        android:clickable="true"
+        android:elevation="6dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_button"
+        app:pressedTranslationZ="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Todolist">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/todo_new"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="10"
+            android:hint="Enter new item." />
+
+        <Button
+            android:id="@+id/todo_add"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="4"
+            android:text="Add">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="TodoList"
+        android:textSize="18dp"/>
+
+    <ListView
+        android:id="@+id/todo_list"
+        android:layout_width="match_parent"
+        android:layout_height="584dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:dividerHeight="@dimen/cardview_default_radius"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" />
+</LinearLayout>
